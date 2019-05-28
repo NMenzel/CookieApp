@@ -31,13 +31,12 @@ for (let i = 0; i < cookies.length; i++) {
 
     //Select all elements
     let modal = document.getElementById("myModal"),
-        span = document.getElementsByClassName("close")[0],
-        h = document.getElementById("modalH"),
-        p = document.getElementById("modalP");
-
+        span = document.getElementsByClassName("close")[0];
+        
     //Set name and description for modal
-    h.innerHTML = `${cookies[i].name}`;
-    p.innerHTML = `${cookies[i].description}`;
+    document.getElementById("modalH").innerHTML = `${cookies[i].name}`;
+    document.getElementById("modalP").innerHTML = `${cookies[i].description}`;
+    document.getElementById("modalContent").innerHTML = `${cookies[i].ingredients.toString()}`;
 
     //Makes div visible
     modal.style.display = "block";
